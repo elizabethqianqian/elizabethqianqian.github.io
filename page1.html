@@ -57,7 +57,7 @@
     </nav>
 </section>
 
-<section class="engine"><a href="https://mobirise.info/o">portfolio site templates</a></section><section class="header6 cid-rVU5CpeuEV mbr-fullscreen" id="header6-6">
+<section class="engine"><a href="https://mobirise.info/c">free website builder</a></section><section class="header6 cid-rVU5CpeuEV mbr-fullscreen" id="header6-6">
 
     
 
@@ -303,7 +303,98 @@
     <div class="container align-center">
         <div class="row justify-content-md-center">
             <div class="mbr-white col-md-10">
-                
+				
+				<div id="container" style="height: 37.5rem"></div>
+       <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js"></script>
+       <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts-gl/dist/echarts-gl.min.js"></script>
+       <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts-stat/dist/ecStat.min.js"></script>
+       <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/dist/extension/dataTool.min.js"></script>
+       <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/map/js/china.js"></script>
+       <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/map/js/world.js"></script>
+       <script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=xfhhaTThl11qYVrqLZii6w8qE5ggnhrY&__ec_v__=20190126"></script>
+       <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/dist/extension/bmap.min.js"></script>
+       <script type="text/javascript">
+var dom = document.getElementById("container");
+var myChart = echarts.init(dom);
+var app = {};
+option = null;
+var data =[
+    {name: '浙江', value: 8},
+    {name: '陕西', value: 2},
+    {name: '甘肃', value: 1},
+    {name: '广东', value: 5},
+    {name: '黑龙江', value: 4},
+    {name: '内蒙古', value: 2},
+    {name: '河南', value: 6},
+    {name: '山东', value: 4},
+    {name: '北京', value: 12},
+    {name: '上海', value: 12},
+    {name: '天津', value: 3},
+    {name: '江西', value: 1},
+    {name: '四川', value: 8},
+    {name: '湖北', value: 36},
+    {name: '福建', value: 4},
+    {name: '江苏', value: 7},
+    {name: '湖南', value: 7},
+];
+var geoCoordMap = {
+   '浙江': ['120.19', '30.26'],
+   '陕西': ['108.95', '34.27'],
+   '甘肃': ['103.73', '36.03'],
+   '广东': ['113.23', '23.16'],
+   '黑龙江': ['126.63', '45.75'],
+   '内蒙古': ['111.65', '40.82'],
+   '河南': ['113.65', '34.76'],
+   '山东': ['106.54', '29.59'],
+   '北京': ['116.46', '39.92'],
+   '上海': ['121.48', '31.22'],
+   '天津': ['117.2', '39.13'],
+   '江西': ['115.89', '28.68'],
+   '四川': ['104.06', '30.67'],
+   '湖北': ['114.31', '30.52'],
+   '福建': ['119.3', '26.08'],
+   '江苏': ['118.78', '32.04'],
+   '湖南': ['113', '28.21'],
+};
+
+var convertData = function (data) {
+    var res = [];
+    for (var i = 0; i < data.length; i++) {
+        var geoCoord = geoCoordMap[data[i].name];
+        if (geoCoord) {
+            res.push({
+                name: data[i].name,
+                value: geoCoord.concat(data[i].value)
+            });
+        }
+    }
+    return res;
+};
+
+option = {
+    title: {
+        text: '各省市谣言分布散点图 - 百度地图',
+        subtext: 'data from 腾讯较真',
+        sublink: 'https://github.com/elizabethqianqian/elizabethqianqian.github.io/blob/https/github.com/elizabethqianqian/elizabethqianqian.github.io/%E8%B4%AA%E5%90%83%E8%9B%87%E6%95%B0%E6%8D%AE%E5%85%AC%E5%BC%80.xlsx/%E8%B4%AA%E5%90%83%E8%9B%87%E6%95%B0%E6%8D%AE%E5%85%AC%E5%BC%80.xlsx',
+        left: 'center'
+    },
+    tooltip : {
+        trigger: 'item'
+    },
+    bmap: {
+        center: [114, 37],
+        zoom: 4,
+        roam: true,
+        mapStyle: {
+            styleJson: [{
+                'featureType': 'water',
+                'elementType': 'all',
+                'stylers': {
+                    'color': '#d1d1d1'
+                }
+            }, {
+                'featureType': 'land',
+                'elementType': 'all',
                 'stylers': {
                     'color': '#f3f3f3'
                 }
@@ -455,7 +546,7 @@
 if (option && typeof option === "object") {
     myChart.setOption(option, true);
 }
-       </script>    
+       </script>                
                 
                 
                 
@@ -913,29 +1004,30 @@ if (option && typeof option === "object") {
             </div>
             <div class="media-container-row image-row">
                 <div class="mbr-figure" style="width: 95%;">
-                    <img src="assets/images/23.png" alt="Mobirise" title="">
+                    <img src="assets/images/26.png" alt="Mobirise" title="">
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<section class="cid-rZfC1F1mKx mbr-fullscreen" id="header2-2u">
+<section class="header5 cid-rZgorwZIBO mbr-fullscreen" id="header5-2v">
 
     
 
     
-
-    <div class="container align-center">
-        <div class="row justify-content-md-center">
+    <div class="container">
+        <div class="row justify-content-center">
             <div class="mbr-white col-md-10">
-                
-                
+				
+
+               
                 
                 
             </div>
         </div>
     </div>
+
     
 </section>
 
